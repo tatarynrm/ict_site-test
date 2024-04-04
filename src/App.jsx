@@ -71,7 +71,7 @@ function App() {
 
       <Footer />
 
-      {visible & (scrollWidth > 650) && (
+      {visible & (scrollWidth > 650) ? (
         <button className="scroll_to_top_btn pulse">
           <FaArrowCircleUp
             fontSize={40}
@@ -80,7 +80,7 @@ function App() {
             style={{ display: visible ? "inline" : "none" }}
           />
         </button>
-      )}
+      ) : null}
     </>
   );
 }

@@ -14,6 +14,9 @@ const Services = () => {
 useEffect(()=>{
 
 },[windowWidth])
+
+
+
   return (
     <section className="services section">
       <div className="services__inner container">

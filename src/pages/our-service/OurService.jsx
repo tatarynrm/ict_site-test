@@ -3,6 +3,7 @@ import './OurService.scss'
 import ServiceCard from '../../components/service/ServiceCard'
 import { services_data } from '../../data/services__data'
 import { Helmet } from 'react-helmet'
+import FreeConsultation from '../../components/free-consultation/FreeConsultation'
 
 const OurService = () => {
   return (
@@ -32,7 +33,10 @@ const OurService = () => {
             return  <ServiceCard key={idx} item={item}/>
           })}
             </div>
+     
         </div>
+        <FreeConsultation/>
+
     </div>
   )
 }

@@ -37,20 +37,26 @@ const ServicePage = ({ item }) => {
       left: 0,
       behavior: "smooth",
     });
-  }, []);
+  
+  }, [header_menu,location]);
   return (
-    <div className="service">
+    <div className="service page">
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>{header_menu.find(val => item.link === val.link).title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{header_menu.find((val) => item.link === val.link).title}</title>
         <meta name="description" content={item.desc} />
 
-
-        <meta property="og:title" content={header_menu.find(val => item.link === val.link).title}/>
-        <meta property="og:description" content={item.desc}/>
-        <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/8b/4f/cf/8b4fcfc3-5839-e63d-02db-c0865b11cf94/logo_photos_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x630wa.png"/>
-        <meta property="og:url" content="http://localhost:3000/adr-cargo"/>
+        <meta
+          property="og:title"
+          content={header_menu.find((val) => item.link === val.link).title}
+        />
+        <meta property="og:description" content={item.desc} />
+        <meta
+          property="og:image"
+          content="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/8b/4f/cf/8b4fcfc3-5839-e63d-02db-c0865b11cf94/logo_photos_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x630wa.png"
+        />
+        <meta property="og:url" content="http://localhost:3000/adr-cargo" />
       </Helmet>
       <div
         className="service__hero"
@@ -68,7 +74,8 @@ const ServicePage = ({ item }) => {
           >
             {item.title}
           </h1>
-          <TypeAnimation
+          {/* <TypeAnimation
+          
             sequence={[
               // Same substring at the start will only be typed out once, initially
               item.desc,
@@ -78,7 +85,16 @@ const ServicePage = ({ item }) => {
             speed={50}
             style={{ fontSize: "18px", display: "inline-block" }}
             repeat={Infinity}
-          />
+            className="service__page-animation-desc"
+          /> */}
+          <h3       data-aos={location ? "fade-right" : "fade-right"}
+                      data-aos-offset="200"
+                      data-aos-delay="50"
+                      data-aos-duration="2000"
+                      data-aos-easing="ease-in-out"
+                      data-aos-mirror="true"
+                      data-aos-once="true"
+          className="service__page-animation-desc">{item.desc}</h3>
           {/* <p 
                data-aos={location ? "fade-left" : "fade-left"}
                data-aos-offset="200"
@@ -89,12 +105,22 @@ const ServicePage = ({ item }) => {
         </div>
       </div>
       <div className="service__description container">
+        <article
+          data-aos="fade-down"
+          data-aos-once="true"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          className="box"
+        >
+          {item?.info}
+        </article>
         <div className="service__description-title">
           <h2 className="service__page-title">
-            ЕТАПИ <br /> РОБОТИ
+            НАШІ <br /> ПЕРЕВАГИ
           </h2>
           <span className="section__little-title">
-            STAGES <br /> OF WORK
+            OUR <br /> ADVANTAGES
           </span>
         </div>
       </div>
