@@ -13,8 +13,8 @@ const ServiceCard = ({ item }) => {
     >
       <div className="card__inner">
         <div className="top">
-          <div className="card__title">{item.title}</div>
-          <div className="card__info">{item.text}</div>
+          <p className="card__title">{item.title}</p>
+          <p className="card__info">{item.text}</p>
         </div>
         <Link to={item.link} className="card__button">Дізнатись більше</Link>
       </div>

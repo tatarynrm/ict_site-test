@@ -12,6 +12,8 @@ import FreeConsultation from "../../components/free-consultation/FreeConsultatio
 import BlogSection from "../../sections/blog/BlogSection";
 import Carousel from "../../components/carousel/Carousel";
 import { Helmet } from "react-helmet";
+import Rating from "../../sections/rating/Rating";
+import Testimonials from "../../components/testimonials/Testimonials";
 const Main = () => {
   return (
     <div className="main">
@@ -27,6 +29,7 @@ const Main = () => {
         <meta property="og:image" content="https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/8b/4f/cf/8b4fcfc3-5839-e63d-02db-c0865b11cf94/logo_photos_color-0-1x_U007emarketing-0-0-0-6-0-0-0-85-220-0.png/1200x630wa.png"/>
         <meta property="og:url" content="http://localhost:3000/adr-cargo"/> */}
       </Helmet>
+      {/* <Rating/> */}
       <Hero />
       <AboutUs />
       <Services />
@@ -37,6 +40,7 @@ const Main = () => {
       <OurClients />
       <BlogSection />
       <FreeConsultation background={"black"} />
+      <Testimonials/>
       {/* <Carousel/> */}
     </div>
   );

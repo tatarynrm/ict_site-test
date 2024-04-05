@@ -12,6 +12,7 @@ const Region = ({ region, cardData, setCardData }) => {
   const removeClassDiv = () => {
     setClassDiv("");
   };
+ 
   return (
     <g
       onClick={() => {

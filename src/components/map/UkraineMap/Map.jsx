@@ -21,7 +21,7 @@ const Map = ({ cardData, setCardData }) => {
 
     fetchData();
     // Встановлюємо інтервал для виклику fetchData() кожні 10 секунд
-    const intervalId = setInterval(fetchData, 15000);
+    const intervalId = setInterval(fetchData, 20000);
 
     // Зупиняємо механізм polling при розміщенні компонента
     return () => clearInterval(intervalId);

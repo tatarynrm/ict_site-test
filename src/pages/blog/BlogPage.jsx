@@ -4,7 +4,44 @@ import { Helmet } from "react-helmet";
 import BlogItem from "../../components/blog/BlogItem";
 import { useLocation } from "react-router-dom";
 const BlogPage = () => {
-
+  const blogs = [
+    {
+      title: "Україна відкриє новий пункт пропуску з Румунією",
+      desc: `Україна відкриє новий пункт пропуску з Румунією, заявив прем’єр-міністр Денис Шмигаль.
+    `,
+      img: "https://minfin.com.ua/img/2024/124333162/d2a90bacd16b0b05a5f0fd8cc66e70fd.jpeg",
+    },
+    {
+      title: "За березень Україна експортувала на 45% більше пшениці",
+      desc: `Україна відкриє новий пункт пропуску з Румунією, заявив прем’єр-міністр Денис Шмигаль.
+    `,
+      img: "https://landlord.ua/wp-content/uploads/2024/04/st_23-04-19-01.jpg",
+    },
+    {
+      title: "На Закарпатті мають намір звести порт з мультимодальним терміналом",
+      desc: `УЗавдяки реалізації проєкту можна буде організувати міжнародні перевезення Тисою із виходом до більших судноплавних річок
+    `,
+      img: "https://zaxid.net/resources/photos/news/202403/1582686.jpg?20240401223605&fit=cover&w=1200&h=675&q=10",
+    },
+    {
+      title: "На Закарпатті мають намір звести порт з мультимодальним терміналом",
+      desc: `УЗавдяки реалізації проєкту можна буде організувати міжнародні перевезення Тисою із виходом до більших судноплавних річок
+    `,
+      img: "https://zaxid.net/resources/photos/news/202403/1582686.jpg?20240401223605&fit=cover&w=1200&h=675&q=10",
+    },
+    {
+      title: "На Закарпатті мають намір звести порт з мультимодальним терміналом",
+      desc: `УЗавдяки реалізації проєкту можна буде організувати міжнародні перевезення Тисою із виходом до більших судноплавних річок
+    `,
+      img: "https://zaxid.net/resources/photos/news/202403/1582686.jpg?20240401223605&fit=cover&w=1200&h=675&q=10",
+    },
+    {
+      title: "На Закарпатті мають намір звести порт з мультимодальним терміналом",
+      desc: `УЗавдяки реалізації проєкту можна буде організувати міжнародні перевезення Тисою із виходом до більших судноплавних річок
+    `,
+      img: "https://zaxid.net/resources/photos/news/202403/1582686.jpg?20240401223605&fit=cover&w=1200&h=675&q=10",
+    },
+  ];
   return (
     <div className="blog page">
       <Helmet>
@@ -28,13 +65,10 @@ const BlogPage = () => {
         <h1 className="page__title">БЛОГ</h1>
 
         <div className="blog__items">
-          <BlogItem/>
-          <BlogItem/>
-          <BlogItem/>
-          <BlogItem/>
-          <BlogItem/>
-          <BlogItem/>
-          <BlogItem/>
+        {blogs.map((item,idx)=>{
+        return <BlogItem key={idx} item={item}/>
+       })}
+     
         </div>
       </div>
     </div>
